@@ -121,6 +121,24 @@ public class Array<E> {
     }
 
     /**
+     * 获取索引为0的元素。
+     *
+     * @return
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
+     * 获取索引为size-1的元素。
+     *
+     * @return
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
      * 修改index索引位置的元素为e。
      *
      * @param index
