@@ -3,7 +3,7 @@ package co.zhangbiao.datastructure.set;
 import java.util.TreeSet;
 
 /**
- * 描述：解答LeetCode中804.唯一摩尔斯密码词一题。
+ * 描述：解答LeetCode中唯一摩尔斯密码词一题。
  * <p>
  * Create By ZhangBiao
  * 2020/4/27
