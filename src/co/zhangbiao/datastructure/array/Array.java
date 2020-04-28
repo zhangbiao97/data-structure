@@ -29,6 +29,14 @@ public class Array<E> {
         this(10);
     }
 
+    public Array(E[] arr) {
+        this.data = (E[]) new Object[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            this.data[i] = arr[i];
+        }
+        this.size = this.data.length;
+    }
+
     /**
      * 获取数组的容量。
      *
@@ -230,6 +238,15 @@ public class Array<E> {
         if (index != -1) {
             remove(index);
         }
+    }
+
+    public void swap(int i, int j) {
+        if (i < 0 || i >= size || j < 0 || j >= size) {
+            throw new IllegalArgumentException("Index is Illegal");
+        }
+        E temp = data[i];
+        data[i] = data[j];
+        data[j] = temp;
     }
 
     @Override
