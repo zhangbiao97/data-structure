@@ -35,9 +35,9 @@ public class BinarySearchTreeMap<K extends Comparable<K>, V> implements Map<K, V
             size++;
             return new Node(key, value);
         }
-        if (node.key.compareTo(key) < 0) {
+        if (key.compareTo(node.key) < 0) {
             node.left = add(node.left, key, value);
-        } else if (node.key.compareTo(key) > 0) {
+        } else if (key.compareTo(node.key) > 0) {
             node.right = add(node.right, key, value);
         } else {
             node.value = value;
@@ -89,10 +89,10 @@ public class BinarySearchTreeMap<K extends Comparable<K>, V> implements Map<K, V
         if (node == null) {
             return node;
         }
-        if (node.key.compareTo(key) < 0) {
+        if (key.compareTo(node.key) < 0) {
             node.left = remove(node.left, key);
             return node;
-        } else if (node.key.compareTo(key) > 0) {
+        } else if (key.compareTo(node.key) > 0) {
             node.right = remove(node.right, key);
             return node;
         } else {
@@ -157,9 +157,9 @@ public class BinarySearchTreeMap<K extends Comparable<K>, V> implements Map<K, V
         if (node == null) {
             return null;
         }
-        if (node.key.equals(key)) {
+        if (key.equals(node.key)) {
             return node;
-        } else if (node.key.compareTo(key) < 0) {
+        } else if (key.compareTo(node.key) < 0) {
             return getNode(node.left, key);
         } else {
             return getNode(node.right, key);
